@@ -1,0 +1,10 @@
+node_modules
+dist
+
+/generated/prisma
+
+.agents
+.claude
+.windsurf
+skills-lock.json
+.neon

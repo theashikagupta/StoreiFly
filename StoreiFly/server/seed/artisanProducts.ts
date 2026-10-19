@@ -1,0 +1,136 @@
+import type { StoreProductSchema, StoreInfoSchema, StoreMerchantSchema, StoreCategorySchema, StoreCustomerSchema } from "./types.js";
+
+export const ARTISAN_MERCHANT: StoreMerchantSchema = {
+    name: "Alex Morgan",
+    email: "merchant3@example.com",
+    password_plain: "merchant123",
+};
+
+export const ARTISAN_STORE: StoreInfoSchema = {
+    name: "Artisan Roasters",
+    slug: "artisan-roasters",
+    logo_url: "/logo_2.svg",
+    banner_url: "/storefront_hero_3.png",
+    description: "Small-batch specialty coffee beans freshly roasted and delivered straight to your door.",
+    currency: "USD",
+    status: "active",
+    shipping_fee: 5.0,
+    free_shipping_threshold: 40.0,
+    hero_style: "hero3",
+    accent_color: "#782200",
+};
+
+export const ARTISAN_CATEGORIES: StoreCategorySchema[] = [
+    { name: "Whole Bean Coffee", slug: "whole-bean-coffee" },
+    { name: "Brew Equipment", slug: "brew-equipment" },
+];
+
+export const ARTISAN_CUSTOMER: StoreCustomerSchema = {
+    name: "Sarah Jenkins",
+    email: "customer3@example.com",
+    password_plain: "customer123",
+    phone: "+1 (555) 234-5678",
+    shipping_address: {
+        street: "742 Evergreen Terrace",
+        city: "Seattle",
+        state: "WA",
+        zip: "98101",
+        country: "United States",
+    },
+};
+
+export const ARTISAN_PRODUCTS: StoreProductSchema[] = [
+    {
+        name: "Ethiopian Yirgacheffe Single Origin",
+        description: "Delicate floral jasmine notes with bright bergamot and honey sweetness. Light roast.",
+        price: 18.5,
+        compare_at_price: 22.0,
+        sku: "ETH-YIRG-250",
+        stock: 50,
+        images: ["https://images.unsplash.com/photo-1587734195503-904fca47e0e9?w=600&auto=format&fit=crop&q=80"],
+        variants: [
+            { name: "Bag Size", options: ["250g", "500g", "1kg"] },
+            { name: "Grind", options: ["Whole Bean", "Espresso", "Filter"] },
+        ],
+        status: "active",
+        category_name: "Whole Bean Coffee",
+        category_slug: "whole-bean-coffee",
+        bestseller: true,
+    },
+    {
+        name: "Colombian Supremo Dark Roast",
+        description: "Rich dark chocolate, roasted almond, and caramel finish. Perfect for espresso and milk drinks.",
+        price: 16.0,
+        compare_at_price: 19.5,
+        sku: "COL-SUP-250",
+        stock: 35,
+        images: ["https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop&q=80"],
+        variants: [
+            { name: "Bag Size", options: ["250g", "500g", "1kg"] },
+            { name: "Grind", options: ["Whole Bean", "Coarse"] },
+        ],
+        status: "active",
+        category_name: "Whole Bean Coffee",
+        category_slug: "whole-bean-coffee",
+        bestseller: false,
+    },
+    {
+        name: "Guatemala Antigua Los Volcanes",
+        description: "Medium roast with velvety notes of cocoa nibs, brown sugar, and crisp red apple.",
+        price: 17.5,
+        compare_at_price: 21.0,
+        sku: "GUA-ANT-250",
+        stock: 40,
+        images: ["https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=600&auto=format&fit=crop&q=80"],
+        variants: [
+            { name: "Bag Size", options: ["250g", "500g", "1kg"] },
+            { name: "Grind", options: ["Whole Bean", "Espresso", "Filter"] },
+        ],
+        status: "active",
+        category_name: "Whole Bean Coffee",
+        category_slug: "whole-bean-coffee",
+        bestseller: false,
+    },
+    {
+        name: "Precision Ceramic Dripper V60",
+        description: "Minimalist matte ceramic pour-over dripper designed for optimal extraction flow rate.",
+        price: 28.0,
+        compare_at_price: null,
+        sku: "ACC-V60-MATTE",
+        stock: 20,
+        images: ["https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&auto=format&fit=crop&q=80"],
+        variants: [{ name: "Color", options: ["Matte Black", "Stone White", "Sage Green"] }],
+        status: "active",
+        category_name: "Brew Equipment",
+        category_slug: "brew-equipment",
+        bestseller: true,
+    },
+    {
+        name: "Handheld Stainless Burr Grinder",
+        description: "Precision conical ceramic burrs with 24 adjustable click settings for coarse French press to fine espresso.",
+        price: 42.0,
+        compare_at_price: 49.0,
+        sku: "ACC-GRIND-SS",
+        stock: 25,
+        images: ["https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=600&auto=format&fit=crop&q=80"],
+        variants: [{ name: "Finish", options: ["Brushed Steel", "Matte Black"] }],
+        status: "active",
+        category_name: "Brew Equipment",
+        category_slug: "brew-equipment",
+        bestseller: false,
+    },
+    {
+        name: "Gooseneck Temperature Pouring Kettle",
+        description: "Ergonomic 1.0L electric pouring kettle with precision digital temperature hold and count-up brew timer.",
+        price: 68.0,
+        compare_at_price: 79.0,
+        sku: "ACC-KETTLE-10",
+        stock: 15,
+        images: ["https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=600&auto=format&fit=crop&q=80"],
+        variants: [{ name: "Color", options: ["Matte Black", "Stainless"] }],
+        status: "active",
+        category_name: "Brew Equipment",
+        category_slug: "brew-equipment",
+        bestseller: false,
+    },
+];
